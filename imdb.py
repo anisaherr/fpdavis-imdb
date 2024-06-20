@@ -155,7 +155,7 @@ with col2:
                 </div>
                 """, unsafe_allow_html=True)
     
-    st.markdown(f"<p style='padding-top: 120px;'></p>", unsafe_allow_html=True)
+    st.markdown(f"<p style='padding-top: 90px;'></p>", unsafe_allow_html=True)
     st.subheader("Runtime Distribution")
     st.markdown("""
                 <div style='text-align: justify;'>
