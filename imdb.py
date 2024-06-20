@@ -76,11 +76,11 @@ st.markdown("""
             """, unsafe_allow_html=True)
 
 st.markdown(f"<p style='padding-top: 8px;'></p>", unsafe_allow_html=True)
-            if st.button("Convert to Speech"):
-                text = f"Berdasarkan analisis data penjualan Adventure Works dari tahun dua ribu satu hingga dua ribu empat, terlihat tren peningkatan yang signifikan dalam kinerja penjualan perusahaan. Total penjualan meningkat dari tiga koma dua tujuh juta USD pada tahun dua ribu satu menjadi sembilan koma tujuh tujuh juta USD pada tahun dua ribu empat, yang menunjukkan pertumbuhan lebih dari tiga kali lipat dalam empat tahun. Kuantitas produk yang terjual juga meningkat secara konsisten setiap tahun, dari satu koma nol ribu unit pada tahun dua ribu satu menjadi tiga puluh dua koma tiga ribu unit pada tahun dua ribu empat. Meskipun total penjualan dan kuantitas meningkat, profit tetap stabil dengan sedikit penurunan dari empat koma nol tujuh juta USD pada tahun dua ribu tiga menjadi empat koma nol lima juta USD pada tahun dua ribu empat. Persentase keuntungan relatif stabil dengan sedikit fluktuasi, menunjukkan efisiensi operasional yang baik. Margin keuntungan tetap kuat di sekitar empat puluh persen, mencerminkan kemampuan perusahaan untuk mempertahankan profitabilitas yang tinggi meskipun ada peningkatan dalam volume penjualan. Data ini menunjukkan performa yang mengesankan dan pertumbuhan yang berkelanjutan dari Adventure Works."
-                audio_file = text_to_speech_gtts(text, lang='id')
-                st.audio(audio_file)
-                os.remove(audio_file)
+if st.button("Convert to Speech"):
+   text = f"Berdasarkan analisis data penjualan Adventure Works dari tahun dua ribu satu hingga dua ribu empat, terlihat tren peningkatan yang signifikan dalam kinerja penjualan perusahaan. Total penjualan meningkat dari tiga koma dua tujuh juta USD pada tahun dua ribu satu menjadi sembilan koma tujuh tujuh juta USD pada tahun dua ribu empat, yang menunjukkan pertumbuhan lebih dari tiga kali lipat dalam empat tahun. Kuantitas produk yang terjual juga meningkat secara konsisten setiap tahun, dari satu koma nol ribu unit pada tahun dua ribu satu menjadi tiga puluh dua koma tiga ribu unit pada tahun dua ribu empat. Meskipun total penjualan dan kuantitas meningkat, profit tetap stabil dengan sedikit penurunan dari empat koma nol tujuh juta USD pada tahun dua ribu tiga menjadi empat koma nol lima juta USD pada tahun dua ribu empat. Persentase keuntungan relatif stabil dengan sedikit fluktuasi, menunjukkan efisiensi operasional yang baik. Margin keuntungan tetap kuat di sekitar empat puluh persen, mencerminkan kemampuan perusahaan untuk mempertahankan profitabilitas yang tinggi meskipun ada peningkatan dalam volume penjualan. Data ini menunjukkan performa yang mengesankan dan pertumbuhan yang berkelanjutan dari Adventure Works."
+   audio_file = text_to_speech_gtts(text, lang='id')
+   st.audio(audio_file)
+   os.remove(audio_file)
 
 col1, col2 = st.columns(2)
 
