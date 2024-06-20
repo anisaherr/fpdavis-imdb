@@ -3,30 +3,27 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import altair as alt
-import pyttsx3
+from gtts import gTTS
+import tempfile
+import os
 
 st.set_page_config(layout="wide", page_title="IMDB Movies Dashboard")
 
-# Load the dataset
-file_path = 'C:\\Users\\anisa\\Downloads\\imdb50.csv'  # update this with the correct path
+file_path = 'imdb50.csv' 
 data = pd.read_csv(file_path)
 
-# Function for text to speech
-def text_to_speech(text):
-    engine = pyttsx3.init()
-    engine.setProperty('rate', 130)
-    engine.setProperty('volume', 1.0)
-    engine.say(text)
-    engine.runAndWait()
+def text_to_speech_gtts(text, lang='id'):
+    tts = gTTS(text=text, lang=lang)
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as tmpfile:
+        tts.save(tmpfile.name)
+        return tmpfile.name
 
-# Function to clean monetary values
 def clean_monetary_value(value):
     try:
         return float(value.replace('$', '').replace(',', '').replace('¥', '').replace('£', '').replace('€', ''))
     except:
         return None
     
-# Fungsi untuk membersihkan nilai pada kolom Color
 def clean_color(value):
     value = str(value).strip().lower()
     if 'color' in value:
@@ -38,7 +35,6 @@ def clean_color(value):
 data['Color'] = data['Color'].apply(clean_color)
 data = data[data['Color'].notnull()]
 
-# Function to format numbers
 def format_number(number):
     if isinstance(number, str):
         number = float(number.replace(',', ''))
@@ -51,7 +47,6 @@ def format_number(number):
     else:
         return f"{number:.2f}"
 
-# Clean and preprocess data
 data['Budget'] = data['Budget'].apply(clean_monetary_value)
 data['Gross US & Canada'] = data['Gross US & Canada'].apply(clean_monetary_value)
 data['Opening weekend Earnings'] = data['Opening weekend Earnings'].apply(clean_monetary_value)
@@ -59,10 +54,8 @@ data['Gross worldwide'] = data['Gross worldwide'].apply(clean_monetary_value)
 data['Runtime (minutes)'] = data['Runtime'].str.extract('(\d+)').astype(float)
 data['Opening weekend Release Date'] = pd.to_datetime(data['Opening weekend Release Date'], errors='coerce')
 
-# Color palette
 color_palette = ['#003f5c', '#58508d', '#bc5090', '#ff6361', '#ffa600']
 
-# Streamlit app
 total_titles = data['Title'].nunique()
 total_budget = data['Budget'].sum()
 total_opening_weekend_earnings = data['Opening weekend Earnings'].sum()
@@ -83,11 +76,11 @@ st.markdown("""
             """, unsafe_allow_html=True)
 
 st.markdown(f"<p style='padding-top: 8px;'></p>", unsafe_allow_html=True)
-
-if st.button("Convert to Speech"):
-    text_to_speech("""
-                    Berdasarkan analisis data penjualan Adventure Works dari tahun 2001 hingga 2004, terlihat tren peningkatan yang signifikan dalam kinerja penjualan perusahaan. Total penjualan meningkat dari 3,27 juta USD pada tahun 2001 menjadi 9,77 juta USD pada tahun 2004, yang menunjukkan pertumbuhan lebih dari tiga kali lipat dalam empat tahun. Kuantitas produk yang terjual juga meningkat secara konsisten setiap tahun, dari 1,0 ribu unit pada tahun 2001 menjadi 32,3 ribu unit pada tahun 2004. Meskipun total penjualan dan kuantitas meningkat, profit tetap stabil dengan sedikit penurunan dari 4,07 juta USD pada tahun 2003 menjadi 4,05 juta USD pada tahun 2004. Persentase keuntungan relatif stabil dengan sedikit fluktuasi, menunjukkan efisiensi operasional yang baik. Margin keuntungan tetap kuat di sekitar 40%, mencerminkan kemampuan perusahaan untuk mempertahankan profitabilitas yang tinggi meskipun ada peningkatan dalam volume penjualan. Data ini menunjukkan performa yang mengesankan dan pertumbuhan yang berkelanjutan dari Adventure Works.
-                   """)
+            if st.button("Convert to Speech"):
+                text = f"Berdasarkan analisis data penjualan Adventure Works dari tahun dua ribu satu hingga dua ribu empat, terlihat tren peningkatan yang signifikan dalam kinerja penjualan perusahaan. Total penjualan meningkat dari tiga koma dua tujuh juta USD pada tahun dua ribu satu menjadi sembilan koma tujuh tujuh juta USD pada tahun dua ribu empat, yang menunjukkan pertumbuhan lebih dari tiga kali lipat dalam empat tahun. Kuantitas produk yang terjual juga meningkat secara konsisten setiap tahun, dari satu koma nol ribu unit pada tahun dua ribu satu menjadi tiga puluh dua koma tiga ribu unit pada tahun dua ribu empat. Meskipun total penjualan dan kuantitas meningkat, profit tetap stabil dengan sedikit penurunan dari empat koma nol tujuh juta USD pada tahun dua ribu tiga menjadi empat koma nol lima juta USD pada tahun dua ribu empat. Persentase keuntungan relatif stabil dengan sedikit fluktuasi, menunjukkan efisiensi operasional yang baik. Margin keuntungan tetap kuat di sekitar empat puluh persen, mencerminkan kemampuan perusahaan untuk mempertahankan profitabilitas yang tinggi meskipun ada peningkatan dalam volume penjualan. Data ini menunjukkan performa yang mengesankan dan pertumbuhan yang berkelanjutan dari Adventure Works."
+                audio_file = text_to_speech_gtts(text, lang='id')
+                st.audio(audio_file)
+                os.remove(audio_file)
 
 col1, col2 = st.columns(2)
 
