@@ -139,7 +139,7 @@ with col2:
                 </div>
                 """, unsafe_allow_html=True)
     
-    st.markdown(f"<p style='padding-top: 100px;'></p>", unsafe_allow_html=True)
+    st.markdown(f"<p style='padding-top: 130px;'></p>", unsafe_allow_html=True)
     st.subheader("Highest Budget Movies")
     st.markdown("""
                 <div style='text-align: justify;'>
@@ -147,7 +147,7 @@ with col2:
                 </div>
                 """, unsafe_allow_html=True)
     
-    st.markdown(f"<p style='padding-top: 100px;'></p>", unsafe_allow_html=True)
+    st.markdown(f"<p style='padding-top: 140px;'></p>", unsafe_allow_html=True)
     st.subheader("Gross US & Canada vs. Gross Worldwide")
     st.markdown("""
                 <div style='text-align: justify;'>
@@ -155,18 +155,18 @@ with col2:
                 </div>
                 """, unsafe_allow_html=True)
     
-    st.markdown(f"<p style='padding-top: 10px;'></p>", unsafe_allow_html=True)
+    st.markdown(f"<p style='padding-top: 120px;'></p>", unsafe_allow_html=True)
     st.subheader("Runtime Distribution")
     st.markdown("""
                 <div style='text-align: justify;'>
-                    Grafik ini menunjukkan bahwa Amerika Serikat dan Australia konsisten sebagai dua negara dengan total penjualan tertinggi. Pada tahun 2001, Australia memimpin dengan total penjualan sekitar 1,2 juta, diikuti oleh Amerika Serikat. Tren ini berlanjut hingga tahun 2002 dengan peningkatan yang signifikan di Amerika Serikat, menyusul Australia di posisi kedua. Pada tahun 2003, meskipun posisi puncak dipegang oleh Australia, Amerika Serikat berhasil mendekati dengan peningkatan penjualan yang signifikan. Pada tahun 2004, Amerika Serikat mencapai puncak penjualan tertinggi dengan total lebih dari 3 juta, sementara Australia turun ke posisi kedua. Hal ini menunjukkan pertumbuhan pasar yang signifikan di Amerika Serikat, yang menjadi pasar utama Adventure Works dalam periode ini, dengan peningkatan yang konsisten setiap tahun. Adapun negara-negara seperti Inggris, Jerman, dan Perancis, meskipun berkontribusi pada penjualan, tetap berada di posisi lebih rendah dengan total penjualan lebih sedikit.
+                 Box plot ini menggambarkan distribusi durasi film dan menunjukkan beberapa poin penting. Durasi film terendah adalah 1 jam, sementara durasi tertinggi adalah 3 jam. Kuartil pertama (Q1) menunjukkan bahwa 25% dari film memiliki durasi kurang dari atau sama dengan 1 jam. Nilai tengah atau median dari durasi film adalah 2 jam, yang berarti 50% dari film memiliki durasi kurang dari atau sama dengan 2 jam. Kuartil ketiga (Q3) mengindikasikan bahwa 75% dari film memiliki durasi kurang dari atau sama dengan 2 jam. Rentang antar kuartil (IQR) adalah 1 jam, menunjukkan bahwa variabilitas durasi film dalam kumpulan data ini tidak terlalu besar. Tidak ada pencilan (outliers) yang terdeteksi, menandakan bahwa durasi film cenderung konsisten tanpa nilai yang ekstrem.
                 </div>
                 """, unsafe_allow_html=True)
     
-    st.markdown(f"<p style='padding-top: 10px;'></p>", unsafe_allow_html=True)
+    st.markdown(f"<p style='padding-top: 140px;'></p>", unsafe_allow_html=True)
     st.subheader("Top Movies by Gross Worldwide")
     st.markdown("""
                 <div style='text-align: justify;'>
-                    Grafik ini menunjukkan bahwa Amerika Serikat dan Australia konsisten sebagai dua negara dengan total penjualan tertinggi. Pada tahun 2001, Australia memimpin dengan total penjualan sekitar 1,2 juta, diikuti oleh Amerika Serikat. Tren ini berlanjut hingga tahun 2002 dengan peningkatan yang signifikan di Amerika Serikat, menyusul Australia di posisi kedua. Pada tahun 2003, meskipun posisi puncak dipegang oleh Australia, Amerika Serikat berhasil mendekati dengan peningkatan penjualan yang signifikan. Pada tahun 2004, Amerika Serikat mencapai puncak penjualan tertinggi dengan total lebih dari 3 juta, sementara Australia turun ke posisi kedua. Hal ini menunjukkan pertumbuhan pasar yang signifikan di Amerika Serikat, yang menjadi pasar utama Adventure Works dalam periode ini, dengan peningkatan yang konsisten setiap tahun. Adapun negara-negara seperti Inggris, Jerman, dan Perancis, meskipun berkontribusi pada penjualan, tetap berada di posisi lebih rendah dengan total penjualan lebih sedikit.
+                 Pie chart ini menunjukkan distribusi warna dalam film. Sebagian besar film, yaitu 86,4%, dibuat dalam format berwarna, sementara sisanya 13,6% dibuat dalam format hitam-putih. Hal ini menandakan bahwa film berwarna jauh lebih dominan dibandingkan film hitam-putih dalam kumpulan data ini, mencerminkan preferensi industri film terhadap produksi film berwarna. Dominasi ini kemungkinan dipengaruhi oleh perkembangan teknologi dan preferensi audiens yang lebih memilih pengalaman visual yang lebih kaya dan beragam.
                 </div>
                 """, unsafe_allow_html=True)
