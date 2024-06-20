@@ -31,7 +31,7 @@ def clean_color(value):
     elif 'black and white' in value or 'bw' in value:
         return 'Black and White'
     else:
-        return None
+        return Value
 data['Color'] = data['Color'].apply(clean_color)
 data = data[data['Color'].notnull()]
 
