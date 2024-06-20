@@ -131,7 +131,7 @@ with col2:
                 </div>
                 """, unsafe_allow_html=True)
     
-    st.markdown(f"<p style='padding-top: 10px;'></p>", unsafe_allow_html=True)
+    st.markdown(f"<p style='padding-top: 100px;'></p>", unsafe_allow_html=True)
     st.subheader("Opening Weekend Earnings Over Time")
     st.markdown("""
                 <div style='text-align: justify;'>
