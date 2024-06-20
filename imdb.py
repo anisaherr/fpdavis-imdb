@@ -139,24 +139,24 @@ with col2:
                 </div>
                 """, unsafe_allow_html=True)
     
-    st.markdown(f"<p style='padding-top: 10px;'></p>", unsafe_allow_html=True)
-    st.subheader("Top Movies by Gross Worldwide")
+    st.markdown(f"<p style='padding-top: 100px;'></p>", unsafe_allow_html=True)
+    st.subheader("Highest Budget Movies")
     st.markdown("""
                 <div style='text-align: justify;'>
-                    Grafik ini menunjukkan bahwa Amerika Serikat dan Australia konsisten sebagai dua negara dengan total penjualan tertinggi. Pada tahun 2001, Australia memimpin dengan total penjualan sekitar 1,2 juta, diikuti oleh Amerika Serikat. Tren ini berlanjut hingga tahun 2002 dengan peningkatan yang signifikan di Amerika Serikat, menyusul Australia di posisi kedua. Pada tahun 2003, meskipun posisi puncak dipegang oleh Australia, Amerika Serikat berhasil mendekati dengan peningkatan penjualan yang signifikan. Pada tahun 2004, Amerika Serikat mencapai puncak penjualan tertinggi dengan total lebih dari 3 juta, sementara Australia turun ke posisi kedua. Hal ini menunjukkan pertumbuhan pasar yang signifikan di Amerika Serikat, yang menjadi pasar utama Adventure Works dalam periode ini, dengan peningkatan yang konsisten setiap tahun. Adapun negara-negara seperti Inggris, Jerman, dan Perancis, meskipun berkontribusi pada penjualan, tetap berada di posisi lebih rendah dengan total penjualan lebih sedikit.
+                Grafik ini menampilkan film-film dengan anggaran produksi terbesar, menunjukkan tren bahwa film dengan tema epik, sci-fi, dan aksi membutuhkan investasi besar untuk menciptakan pengalaman sinematik yang memukau. Anggaran besar ini mencakup biaya untuk efek visual canggih, lokasi yang luas, dan tim produksi yang besar, yang semuanya berkontribusi pada kualitas dan daya tarik film tersebut. Investasi besar ini juga mencerminkan ekspektasi tinggi terhadap kesuksesan box office, di mana film-film ini diharapkan tidak hanya memikat penonton dengan visual spektakuler tetapi juga meraih pendapatan yang signifikan. Tren ini memperlihatkan bagaimana industri film berani mengambil risiko besar demi menghasilkan karya-karya unggulan.
+                </div>
+                """, unsafe_allow_html=True)
+    
+    st.markdown(f"<p style='padding-top: 100px;'></p>", unsafe_allow_html=True)
+    st.subheader("Gross US & Canada vs. Gross Worldwide")
+    st.markdown("""
+                <div style='text-align: justify;'>
+                Heatmap ini memvisualisasikan hubungan antara pendapatan kotor di AS & Kanada dengan pendapatan kotor di seluruh dunia untuk kumpulan data film. Intensitas warna menunjukkan jumlah film yang jatuh ke dalam setiap kelompok pendapatan. Dari heatmap ini, terlihat bahwa sejumlah besar film meraup antara $200 juta dan $600 juta di AS & Kanada, dan film-film tersebut cenderung meraup antara $0,6 miliar dan $1,2 miliar di seluruh dunia, seperti yang ditunjukkan oleh area biru gelap di tengah. Warna yang lebih terang pada kelompok pendapatan yang lebih rendah menunjukkan lebih sedikit film yang mencapai pendapatan kotor tinggi di seluruh dunia meskipun pendapatan domestik rendah. Pola ini menunjukkan bahwa kinerja domestik yang kuat seringkali disertai dengan penerimaan internasional yang baik, menekankan pentingnya kedua pasar dalam kesuksesan finansial keseluruhan film.
                 </div>
                 """, unsafe_allow_html=True)
     
     st.markdown(f"<p style='padding-top: 10px;'></p>", unsafe_allow_html=True)
-    st.subheader("Top Movies by Gross Worldwide")
-    st.markdown("""
-                <div style='text-align: justify;'>
-                    Grafik ini menunjukkan bahwa Amerika Serikat dan Australia konsisten sebagai dua negara dengan total penjualan tertinggi. Pada tahun 2001, Australia memimpin dengan total penjualan sekitar 1,2 juta, diikuti oleh Amerika Serikat. Tren ini berlanjut hingga tahun 2002 dengan peningkatan yang signifikan di Amerika Serikat, menyusul Australia di posisi kedua. Pada tahun 2003, meskipun posisi puncak dipegang oleh Australia, Amerika Serikat berhasil mendekati dengan peningkatan penjualan yang signifikan. Pada tahun 2004, Amerika Serikat mencapai puncak penjualan tertinggi dengan total lebih dari 3 juta, sementara Australia turun ke posisi kedua. Hal ini menunjukkan pertumbuhan pasar yang signifikan di Amerika Serikat, yang menjadi pasar utama Adventure Works dalam periode ini, dengan peningkatan yang konsisten setiap tahun. Adapun negara-negara seperti Inggris, Jerman, dan Perancis, meskipun berkontribusi pada penjualan, tetap berada di posisi lebih rendah dengan total penjualan lebih sedikit.
-                </div>
-                """, unsafe_allow_html=True)
-    
-    st.markdown(f"<p style='padding-top: 10px;'></p>", unsafe_allow_html=True)
-    st.subheader("Top Movies by Gross Worldwide")
+    st.subheader("Runtime Distribution")
     st.markdown("""
                 <div style='text-align: justify;'>
                     Grafik ini menunjukkan bahwa Amerika Serikat dan Australia konsisten sebagai dua negara dengan total penjualan tertinggi. Pada tahun 2001, Australia memimpin dengan total penjualan sekitar 1,2 juta, diikuti oleh Amerika Serikat. Tren ini berlanjut hingga tahun 2002 dengan peningkatan yang signifikan di Amerika Serikat, menyusul Australia di posisi kedua. Pada tahun 2003, meskipun posisi puncak dipegang oleh Australia, Amerika Serikat berhasil mendekati dengan peningkatan penjualan yang signifikan. Pada tahun 2004, Amerika Serikat mencapai puncak penjualan tertinggi dengan total lebih dari 3 juta, sementara Australia turun ke posisi kedua. Hal ini menunjukkan pertumbuhan pasar yang signifikan di Amerika Serikat, yang menjadi pasar utama Adventure Works dalam periode ini, dengan peningkatan yang konsisten setiap tahun. Adapun negara-negara seperti Inggris, Jerman, dan Perancis, meskipun berkontribusi pada penjualan, tetap berada di posisi lebih rendah dengan total penjualan lebih sedikit.
