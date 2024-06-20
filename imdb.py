@@ -31,9 +31,8 @@ def clean_color(value):
     elif 'black and white' in value or 'bw' in value:
         return 'Black and White'
     else:
-        return Value
+        return None
 data['Color'] = data['Color'].apply(clean_color)
-data = data[data['Color'].notnull()]
 
 def format_number(number):
     if isinstance(number, str):
