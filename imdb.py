@@ -139,7 +139,7 @@ with col2:
                 </div>
                 """, unsafe_allow_html=True)
     
-    st.markdown(f"<p style='padding-top: 130px;'></p>", unsafe_allow_html=True)
+    st.markdown(f"<p style='padding-top: 70px;'></p>", unsafe_allow_html=True)
     st.subheader("Highest Budget Movies")
     st.markdown("""
                 <div style='text-align: justify;'>
@@ -147,7 +147,7 @@ with col2:
                 </div>
                 """, unsafe_allow_html=True)
     
-    st.markdown(f"<p style='padding-top: 140px;'></p>", unsafe_allow_html=True)
+    st.markdown(f"<p style='padding-top: 100px;'></p>", unsafe_allow_html=True)
     st.subheader("Gross US & Canada vs. Gross Worldwide")
     st.markdown("""
                 <div style='text-align: justify;'>
