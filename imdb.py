@@ -131,11 +131,11 @@ with col2:
                 </div>
                 """, unsafe_allow_html=True)
     
-    st.markdown(f"<p style='padding-top: 100px;'></p>", unsafe_allow_html=True)
+    st.markdown(f"<p style='padding-top: 80px;'></p>", unsafe_allow_html=True)
     st.subheader("Opening Weekend Earnings Over Time")
     st.markdown("""
                 <div style='text-align: justify;'>
-                Grafik ini menunjukkan pendapatan akhir pekan pembukaan film dari waktu ke waktu, mulai dari tahun 1975 hingga 2020. Terlihat bahwa pendapatan akhir pekan pembukaan film secara umum mengalami peningkatan signifikan sejak akhir 1980-an hingga awal 2000-an. Puncak tertinggi terjadi sekitar tahun 2010, dengan pendapatan mendekati $160 juta pada akhir pekan pembukaannya. Setelah itu, terdapat fluktuasi yang cukup tajam dengan beberapa periode penurunan dan kenaikan kembali. Tren ini mencerminkan bagaimana industri film telah berkembang pesat, dengan peningkatan anggaran pemasaran dan produksi, serta antisipasi penonton yang semakin tinggi terhadap film-film baru.
+                Grafik ini menunjukkan pendapatan akhir pekan pembukaan film dari waktu ke waktu, mulai dari tahun 1975 hingga 2020. Terlihat bahwa pendapatan akhir pekan pembukaan film secara umum mengalami peningkatan signifikan sejak akhir 1980-an hingga awal 2000-an. Puncak tertinggi terjadi sekitar tahun 2010, dengan pendapatan mendekati $160 juta pada akhir pekan pembukaannya. Setelah itu, terdapat fluktuasi yang cukup tajam dengan beberapa periode penurunan dan kenaikan kembali. Tren ini mencerminkan bagaimana industri film telah berkembang pesat, dengan peningkatan anggaran pemasaran dan produksi, serta antisipasi penonton semakin tinggi. Penggunaan diagram garis dalam visualisasi ini sangat tepat karena memungkinkan kita melihat tren temporal secara berkesinambungan, memudahkan identifikasi pola, dan memahami perubahan jangka panjang dalam pendapatan pembukaan film.
                 </div>
                 """, unsafe_allow_html=True)
     
